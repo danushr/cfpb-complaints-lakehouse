@@ -1,0 +1,18 @@
+[project]
+name = "cfpb-complaints-lakehouse"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+  "pyspark>=4.0,<4.1",
+  "delta-spark>=4.0,<4.1",
+  "deltalake>=1.0",
+  "streamlit>=1.40",
+  "pandas>=2.2",
+]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
